@@ -7,7 +7,7 @@ const PostSchema = new mongoose.Schema({
   },
   content: {
     type: String,
-    required: [true, "Please provide a content"],
+    required: [true, "Please provide some content"],
   },
   author: {
     type: mongoose.Schema.Types.ObjectId,

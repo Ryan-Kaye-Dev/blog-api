@@ -9,6 +9,11 @@ const CommentSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide content"],
   },
+  post: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Post",
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Comment", CommentSchema);
