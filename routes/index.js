@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* index route*/
 router.get("/", function (req, res, next) {
-  res.redirect("/api/");
+  res.redirect(301, "/api/");
 });
 
 module.exports = router;
