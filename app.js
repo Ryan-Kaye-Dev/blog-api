@@ -81,6 +81,9 @@ app.use(passport.initialize());
 const apiRouter = require("./routes/api");
 const indexRouter = require("./routes/index");
 
+app.use("/api", apiRouter);
+app.use("/", indexRouter);
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
