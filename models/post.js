@@ -10,9 +10,8 @@ const PostSchema = new mongoose.Schema({
     required: [true, "Please provide some content"],
   },
   author: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-    required: true,
+    type: String,
+    required: [true, "Please provide an author"],
   },
   date: {
     type: Date,

@@ -31,7 +31,7 @@ exports.post_create = [
       const newPost = new Post({
         title: req.body.title,
         content: req.body.content,
-        author: req.user._id,
+        author: req.user.name,
       });
       await newPost.save();
       res.status(201).json(newPost);
